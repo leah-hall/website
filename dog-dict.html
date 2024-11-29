@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Dictionary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f7f7f7, #e3e3e3);
+        }
+
+        header {
+            text-align: center;
+            background: #ff6600;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        nav button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        nav button:hover {
+            background-color: #ff6600;
+        }
+
+        main {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        main img {
+            display: none;
+            width: 300px;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ff6600;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dog Dictionary 🐾</h1>
+        <p>Click on a breed to learn more!</p>
+    </header>
+
+    <nav>
+        <button onclick="showBreedInfo('australian-shepherd')">Australian Shepherd</button>
+        <button onclick="showBreedInfo('beagle')">Beagle</button>
+        <button onclick="showBreedInfo('chow-chow')">Chow Chow</button>
+        <button onclick="showBreedInfo('dachshund')">Dachshund</button>
+        <button onclick="showBreedInfo('english-bulldog')">English Bulldog</button>
+        <button onclick="showBreedInfo('french-bulldog')">French Bulldog</button>
+        <button onclick="showBreedInfo('german-shepherd')">German Shepherd</button>
+        <button onclick="showBreedInfo('husky')">Husky</button>
+        <button onclick="showBreedInfo('irish-setter')">Irish Setter</button>
+        <button onclick="showBreedInfo('jack-russell-terrier')">Jack Russell Terrier</button>
+        <button onclick="showBreedInfo('keeshond')">Keeshond</button>
+        <button onclick="showBreedInfo('labrador')">Labrador</button>
+        <button onclick="showBreedInfo('malamute')">Alaskan Malamute</button>
+        <button onclick="showBreedInfo('newfoundland')">Newfoundland</button>
+        <button onclick="showBreedInfo('otterhound')">Otterhound</button>
+        <button onclick="showBreedInfo('poodle')">Poodle</button>
+        <button onclick="showBreedInfo('queensland-heeler')">Queensland Heeler</button>
+        <button onclick="showBreedInfo('rottweiler')">Rottweiler</button>
+        <button onclick="showBreedInfo('samoyed')">Samoyed</button>
+        <button onclick="showBreedInfo('terrier')">Terrier</button>
+        <button onclick="showBreedInfo('vizsla')">Vizsla</button>
+        <button onclick="showBreedInfo('weimaraner')">Weimaraner</button>
+        <button onclick="showBreedInfo('xoloitzcuintli')">Xoloitzcuintli</button>
+        <button onclick="showBreedInfo('yorkshire-terrier')">Yorkshire Terrier</button>
+        <button onclick="showBreedInfo('zuchon')">Zuchon</button>
+    </nav>
+
+    <main>
+        <h2 id="breed-name">Select a breed to see details!</h2>
+        <img id="breed-image" alt="Breed Image">
+        <p id="breed-description"></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dog Dictionary. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const breeds = {
+            "australian-shepherd": {
+                name: "Australian Shepherd",
+                image: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Australian_Shepherd_red_merle.jpg",
+                description: "Australian Shepherds are intelligent, energetic, and loyal. They are excellent working dogs, especially for herding."
+            },
+            "beagle": {
+                name: "Beagle",
+                image: "https://upload.wikimedia.org/wikipedia/commons/5/55/Beagle_600.jpg",
+                description: "Beagles are curious, friendly, and merry dogs. They are excellent hunters and great with children."
+            },
+            "chow-chow": {
+                name: "Chow Chow",
+                image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Chow_Chow_bj.jpg",
+                description: "Chow Chows are independent and dignified dogs with a unique lion-like mane."
+            },
+            // Add more breeds as shown earlier
+        };
+
+        function showBreedInfo(breed) {
+            const breedInfo = breeds[breed];
+            if (breedInfo) {
+                document.getElementById("breed-name").textContent = breedInfo.name;
+                const img = document.getElementById("breed-image");
+                img.src = breedInfo.image;
+                img.style.display = "block";
+                document.getElementById("breed-description").textContent = breedInfo.description;
+            }
+        }
+    </script>
+</body>
+</html>
