@@ -11,12 +11,12 @@ const breeds = {
     },
     "chow-chow": {
         name: "Chow Chow",
-        image: "https://parliamentanimalhospital.ca/wp-content/uploads/2023/04/Why-do-Chows-Have-Blue-Tongues.jpg"
+        image: "https://parliamentanimalhospital.ca/wp-content/uploads/2023/04/Why-do-Chows-Have-Blue-Tongues.jpg",
         description: "Chow Chows are independent and dignified dogs with a unique lion-like mane."
     },
     "dachshund": {
         name: "Dachshund",
-        image: "https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-700141990-e1688418771301.jpg?resize=1024,763"
+        image: "https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-700141990-e1688418771301.jpg?resize=1024,763",
         description: "Dachshunds are playful and curious dogs, famous for their unique body shape."
     },
     "english-bulldog": {
