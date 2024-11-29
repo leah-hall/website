@@ -1,1 +1,231 @@
-<html/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Leah</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffcc99, #ff9966);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: #ff6600;
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: fadeIn 2s;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #ff4500;
+            padding: 10px 0;
+            position: sticky;
+            top: 80px;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        nav a:hover {
+            transform: scale(1.2);
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            color: #ff4500;
+        }
+
+        .photo img {
+            border-radius: 50%;
+            width: 250px;
+            height: auto;
+            margin-top: 20px;
+            border: 5px solid #ff4500;
+            transition: transform 0.3s ease;
+        }
+
+        .photo img:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        /* Cool Logo Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .logo-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .logo-container .normal {
+            opacity: 1;
+        }
+
+        .logo-container .tongue {
+            opacity: 0;
+        }
+
+        .logo-container:hover .normal {
+            opacity: 0;
+        }
+
+        .logo-container:hover .tongue {
+            opacity: 1;
+        }
+
+        footer {
+            background: #ff6600;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://media.istockphoto.com/id/182823312/photo/happy-golden-retriever-puppy-smiling-at-camera.jpg?s=1024x1024&w=is&k=20&c=6KxZCWUKsILnX2ZRKhKS9LjeFScj8czpJvp6DVBbzYM=" alt="Normal Puppy" class="normal">
+                <img src="https://media.istockphoto.com/id/1852218219/photo/adorable-labrador-retriever-dog-looking-forward-and-licking-nose.jpg?s=612x612&w=0&k=20&c=Hbs-mX5GzGqB_ofLYKDun7RFL2CxWSDWNPFrMnJ8gog=" alt="Puppy Tongue Out" class="tongue">
+            </div>
+            <h1>Leah </h1>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="content" id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Leah! I'm 10 years old and I love creating fun things like escape rooms. I have a 7-year-old sister, a 4-year-old brother, and a super cute golden retriever puppy named River. Here's more about me:</p>
+        <div class="photo">
+            <img src="https://i.ytimg.com/vi/WKffoGsXZ_o/maxresdefault.jpg" alt="My Photo">
+        </div>
+        <p>MORE ABOUT ME: I'm in 5th grade. I have a mom and a dad. My mom is a nurse practionner and my dad is a software engineer. I learned coding from him (and ChatGPT.)</p>
+    </div>
+
+    <div class="content" id="hobbies">
+        <h2>My Hobbies</h2>
+        <p>Here are a few things I enjoy:</p>
+        <ul>
+            <li>Playing ping pong and foosball in my basement.</li>
+            <li>Making escape rooms for friends and family.</li>
+            <li>Walking my puppy and teaching her tricks.</li>
+            <li>Hanging out with friends and family.</li>
+        </ul>
+        <p>MORE HOBBIES: Art, science, programming and chilling with my dog.</p>
+    </div>
+
+    <div class="content" id="favorites">
+        <h2>My Favorite Things</h2>
+        <ul>
+            <li>Favorite Animal (Besides my dog): Pandas!</li>
+            <li>Favorite Game: Trivial Persuit</li>
+            <li>Favorite Activity: Softball</li>
+            <li>Favorite Movie: The Wild Robot (2024)</li>
+        </ul>
+    </div>
+
+    <div class="content" id="goals">
+        <h2>My Goals</h2>
+        <p>I hope to have a job like a scientest, lawyer or CEO.</p>
+    </div>
+
+    <footer>
+        <p>Created by Leah Hall</p>
+        <p>&copy; 2024 All Rights Reserved
+        (Try hovering over the pictures of the dog.)</p>
+    </footer>
+</body>
+</html>
+
