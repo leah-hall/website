@@ -1,0 +1,160 @@
+
+        /* General Styles */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffcc99, #ff9966);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: #ff6600;
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: fadeIn 2s;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #ff4500;
+            padding: 10px 0;
+            position: sticky;
+            top: 80px;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        nav a:hover {
+            transform: scale(1.2);
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            color: #ff4500;
+        }
+
+        .photo img {
+            border-radius: 50%;
+            width: 250px;
+            height: auto;
+            margin-top: 20px;
+            border: 5px solid #ff4500;
+            transition: transform 0.3s ease;
+        }
+
+        .photo img:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        /* Cool Logo Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .logo-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .logo-container .normal {
+            opacity: 1;
+        }
+
+        .logo-container .tongue {
+            opacity: 0;
+        }
+
+        .logo-container:hover .normal {
+            opacity: 0;
+        }
+
+        .logo-container:hover .tongue {
+            opacity: 1;
+        }
+
+        footer {
+            background: #ff6600;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
