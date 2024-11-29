@@ -1,3 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffcc99, #ff9966);
+    color: #333;
+    line-height: 1.6;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #ff6600;
+    padding: 10px 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    transform: scale(1.1);
+    color: #ffcc99;
+}
+
+main .content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+main .content h1 {
+    color: #ff4500;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+main .content ol {
+    margin: 20px;
+    padding-left: 40px;
+}
+
+main .content ol li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+main .content ol li::before {
+    content: "✔";
+    position: absolute;
+    left: -25px;
+    color: #ff6600;
+}
+
+main .content a {
+    color: #ff4500;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+main .content a:hover {
+    color: #ff6600;
+}
+
+footer {
+    text-align: center;
+    background: #ff6600;
+    color: white;
+    padding: 10px 0;
+}
+Updated HTML:
+Here's an updated version of your HTML with enhanced features:
+
+html
+Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +101,8 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="how-it-was-made.html">How It Was Made</a></li>
-        <li><a href="styles.css">Style code</a></li>
+        <li><a href="how-it-was-made.html" class="active">How It Was Made</a></li>
+        <li><a href="styles.css">Style Code</a></li>
       </ul>
     </nav>
   </header>
@@ -23,12 +113,11 @@
       <ol>
         <li>Leah brainstormed ideas for her website.</li>
         <li>ChatGPT helped generate code snippets for the design and layout.</li>
-        <li>Leah migrated her code to GitHub.</li>
-        <li>Leah customized and added her unique touch on the platform Github!</li>
+        <li>Leah migrated her code to <a href="https://github.com/login" target="_blank">GitHub</a>.</li>
+        <li>Leah customized and added her unique touch on the platform!</li>
       </ol>
       <p>We used basic web technologies like HTML, CSS, and JavaScript to bring it to life.</p>
-      <p> You can go to GitHub.com/login to sign up and program for yourself, for free!!</p>
-      <p> Anyone veiwing this can go into "Style Code" to see the code for all the cool styling we did to make this website pretty!</p>
+      <p>Anyone viewing this can go into "Style Code" to see the code for all the cool styling we did to make this website pretty!</p>
     </div>
   </main>
   <footer>
@@ -36,3 +125,4 @@
   </footer>
 </body>
 </html>
+
