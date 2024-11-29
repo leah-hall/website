@@ -180,7 +180,9 @@
         };
 
         function showBreedInfo(breed) {
+            console.log(`breed ${breed}`);
             const breedInfo = breeds[breed];
+            console.log(`breedInfo ${breedInfo}`);
             document.getElementById("breed-name").textContent = breedInfo.name;
             document.getElementById("breed-image").src = breedInfo.image;
             document.getElementById("breed-description").textContent = breedInfo.description;
